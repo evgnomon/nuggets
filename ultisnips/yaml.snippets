@@ -1,4 +1,4 @@
-snippet taskfile "Ansible: Create file" b
+snippet afile "Ansible: Create file" b
 - name: $1
   file:
     path: /etc/foo.conf
@@ -7,7 +7,7 @@ snippet taskfile "Ansible: Create file" b
     mode: u=rw,g=r,o=r
 endsnippet
 
-snippet taskdir "Ansible: Create directory" b
+snippet adir "Ansible: Create directory" b
 - name: $1
   file:
     path: /work
@@ -17,7 +17,7 @@ snippet taskdir "Ansible: Create directory" b
 		state: directory
 endsnippet
 
-snippet tasklink "Ansible: Create link" b
+snippet alink "Ansible: Create link" b
 - name: $1
   file:
     src: /file/to/link/to
@@ -27,19 +27,12 @@ snippet tasklink "Ansible: Create link" b
     state: link
 endsnippet
 
-snippet taskrm "Ansible: Remove path" b
-- name: $1
-  file:
-    path: /file/to/link/to
-    state: absent
-endsnippet
-
-snippet taskdebug "Ansible debug message" b
+snippet adebug "Ansible debug message" b
 - name: $1
   debug:
     msg: $2
 endsnippet
 
-snippet qb "Put Jinja2 Braces" i
+snippet ab "Put Jinja2 Braces" i
 "{{ $1 }}"
 endsnippet
